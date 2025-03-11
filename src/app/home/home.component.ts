@@ -15,7 +15,5 @@ import { MovieComponent } from './movie/movie.component';
 export class HomeComponent {
   private readonly moviesService = inject(MoviesService)
   movies$: Observable<Movie[]> = this.moviesService.getMovies()
-
-  
 }
 

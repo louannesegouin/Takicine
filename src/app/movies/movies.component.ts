@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { Movie } from '../models/movies';
 import { AsyncPipe } from '@angular/common';
 import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
-  imports: [AsyncPipe, DatePipe],
+  imports: [AsyncPipe, DatePipe, RouterLink],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss'
 })
