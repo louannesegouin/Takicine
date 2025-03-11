@@ -4,11 +4,12 @@ import { Movie } from '../../models/movies';
 import { Observable } from 'rxjs';
 import { MoviesService } from '../../services/movies.service';
 import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-movie',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './add-movie.component.html',
   styleUrl: './add-movie.component.scss'
 })
@@ -25,7 +26,6 @@ movie: Movie = {
 }
   private readonly moviesService = inject(MoviesService)
   private readonly router = inject(Router)
-  movies$: Observable<Movie[]> = this.moviesService.getMovies()
   
   addMovie(): void {
     this.moviesService.addMovie(this.movie).subscribe(

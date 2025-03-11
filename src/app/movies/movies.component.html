@@ -1,5 +1,6 @@
 <h1 class="title">Liste des Films</h1>
-<button routerLink="/add-movie">Nouveau film</button>
+<button class="add-movie-btn" routerLink="/add-movie">➕ Nouveau film</button>
+
 <div class="container">
     <div class="table-responsive">
         <table class="table custom-table">
@@ -11,6 +12,7 @@
                     <th scope="col">Réalisateur</th>
                     <th scope="col">Note</th>
                     <th scope="col">Synopsis</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +26,11 @@
                             <span class="badge rating">{{ movie.rate }}</span>
                         </td>
                         <td class="text-wrap synopsis">{{ movie.synopsis }}</td>
+                        <td class="action-buttons">
+                            <button class="btn delete-btn">🗑️ Supprimer</button>
+                            <button class="btn edit-btn">✏️ Modifier</button>
+                            <button class="btn photo-btn">📷 Ajouter Photo</button>
+                        </td>
                     </tr>
                 }
             </tbody>

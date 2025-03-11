@@ -17,3 +17,4 @@ export class MoviesComponent {
   private readonly moviesService = inject(MoviesService)
   movies$: Observable<Movie[]> = this.moviesService.getMovies()
 }
+
