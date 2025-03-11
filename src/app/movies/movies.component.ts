@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MoviesService } from '../services/movies.service';
+import { Observable } from 'rxjs';
+import { Movie } from '../models/movies';
+import { AsyncPipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
-  imports: [],
+  imports: [AsyncPipe, DatePipe],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss'
 })
 export class MoviesComponent {
-
+  private readonly moviesService = inject(MoviesService)
+  movies$: Observable<Movie[]> = this.moviesService.getMovies()
 }
