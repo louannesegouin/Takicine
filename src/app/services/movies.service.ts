@@ -25,4 +25,8 @@ export class MoviesService {
     return this.httpClient.delete<void>(`${this.url}/${id}`);
   }
 
+  updateMovie(movie: Movie): Observable<Movie> {
+    return this.httpClient.put<Movie>(`${this.url}/${movie.id}`, movie);
+}
+
 }

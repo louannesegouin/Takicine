@@ -27,9 +27,9 @@
                         </td>
                         <td class="text-wrap synopsis">{{ movie.synopsis }}</td>
                         <td class="action-buttons">
-                            <button (click)="deleteMovie(movie.id)"><i class="bi bi-trash-fill"></i>Supprimer</button>
-                            <button class="btn edit-btn">✏️ Modifier</button>
-                            <button class="btn photo-btn">📷 Ajouter Photo</button>
+                            <button class="delete-movie-btn" (click)="deleteMovie(movie.id)"><i class="bi bi-trash-fill"></i>Supprimer</button>
+                            <button class="update-movie-btn" routerLink="/update-movie"><i class="bi bi-pen-fill"></i>Modifier</button>
+                            <button class="add-photo-btn" routerLink="/add-photo"><i class="bi bi-camera-fill"></i> Ajouter une photo</button>
                         </td>
                     </tr>
                 }

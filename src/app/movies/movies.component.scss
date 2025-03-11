@@ -80,3 +80,28 @@ button{
 .action-buttons{
     max-width: 125px;
 }
+
+.add-photo-btn, .update-movie-btn, .delete-movie-btn {
+    padding: 10px 20px;
+    max-width: 100px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.update-movie-btn:hover {
+    background-color: #4A70C5;
+}
+
+.add-photo-btn:hover {
+    background-color: #45c961;
+}
+
+.delete-movie-btn:hover {
+    background-color: #FF6347;
+}
