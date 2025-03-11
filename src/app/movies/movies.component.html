@@ -16,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-                @for (movie of movies$ | async; track movie.id) {
+                @for (movie of movies; track movie.id) {
                     <tr>
                         <td class="fw-bold">{{ movie.id }}</td>
                         <td>{{ movie.title }}</td>
@@ -27,7 +27,7 @@
                         </td>
                         <td class="text-wrap synopsis">{{ movie.synopsis }}</td>
                         <td class="action-buttons">
-                            <button class="btn delete-btn">🗑️ Supprimer</button>
+                            <button (click)="deleteMovie(movie.id)"><i class="bi bi-trash-fill"></i>Supprimer</button>
                             <button class="btn edit-btn">✏️ Modifier</button>
                             <button class="btn photo-btn">📷 Ajouter Photo</button>
                         </td>

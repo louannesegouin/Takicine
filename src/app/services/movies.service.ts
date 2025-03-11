@@ -7,9 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MoviesService {
-  deleteMovie(id: number) {
-    throw new Error('Method not implemented.');
-  }
+
   private readonly httpClient = inject(HttpClient)
   private readonly url = "http://localhost:8080/movies"
   moviesService: any;
@@ -21,6 +19,10 @@ export class MoviesService {
 
   addMovie(movie: Movie): Observable<Movie> {
     return this.httpClient.post<Movie>(this.url, movie);
+  }
+
+  deleteMovie(id: number): Observable<void> {
+    return this.httpClient.delete<void>(`${this.url}/${id}`);
   }
 
 }
