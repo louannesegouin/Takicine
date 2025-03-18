@@ -1,0 +1,22 @@
+<h1 class="title">Pannel administratif</h1>
+
+<div class="stats-container">
+    <div class="stat-box center-content">
+        <button routerLink="/movies">Les films</button>
+    </div>
+    <div class="stat-box center-content">
+        <button routerLink="">Les utilisateurs</button>
+    </div>
+    <div class="stat-box">
+        <span class="stat-label">Nombre total de films</span>
+        <span class="stat-value">{{ movieCount }}</span>
+    </div>
+    <div class="stat-box">
+        <span class="stat-label">Nombre total d'utilisateurs</span>
+        <span class="stat-value"></span>
+    </div>
+</div>
+<div class="chart-container">
+    <h1 class="title2">Les notes</h1>
+    <canvas #movieRatingsChart></canvas>
+</div>

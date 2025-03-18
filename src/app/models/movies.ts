@@ -6,5 +6,4 @@ export interface Movie {
     rate?: number;
     synopsis: string;
     image?: string;
-  }
-  
+}
