@@ -29,7 +29,7 @@
                         <td class="action-buttons">
                             <button class="delete-movie-btn" (click)="deleteMovie(movie.id)"><i class="bi bi-trash-fill"></i>Supprimer</button>
                             <button class="update-movie-btn" [routerLink]="['/update-movie', movie.id]"><i class="bi bi-pen-fill"></i>Modifier</button>
-                            <button class="add-photo-btn" routerLink="/add-photo"><i class="bi bi-camera-fill"></i> Ajouter une photo</button>
+                            <button class="add-photo-btn" [routerLink]="['/add-photo', movie.id]"><i class="bi bi-camera-fill"></i> Ajouter une photo</button>
                         </td>
                     </tr>
                 }

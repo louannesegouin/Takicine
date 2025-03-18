@@ -1,0 +1,24 @@
+<h1 class="title">Ajouter une photo</h1>
+<button class="come-back-btn" routerLink="/movies">Revenir en arrière</button>
+
+<div class="form-container">
+    <div class="form-group">
+        <h1 class="title">{{ movie.title }}</h1>
+        <td>{{ movie.synopsis }}</td>
+    </div>
+
+    @if(currentImageUrl) {
+        <div class="preview-container">
+            <img [src]="currentImageUrl" alt="Image actuelle" class="image-preview">
+        </div>
+    }
+
+    <input type="file" class="file-upload" (change)="onFileSelected($event)" accept="image/*">
+    
+    @if(previewUrl) {
+        <div class="preview-container">
+            <img [src]="previewUrl" alt="Aperçu" class="image-preview">
+        </div>
+    }
+    <button class="btn add-photo-btn" (click)="updatePhoto()">Ajouter la photo</button>
+</div>
