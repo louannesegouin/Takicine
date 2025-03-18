@@ -10,8 +10,8 @@ export class MoviesService {
 
   private readonly httpClient = inject(HttpClient)
   private readonly url = "http://localhost:8080/movies"
-  moviesService: any;
-  router: any;
+
+  constructor() {}
 
   getMovies(): Observable<Movie[]> {
     return this.httpClient.get<Movie[]>(this.url);
@@ -25,8 +25,11 @@ export class MoviesService {
     return this.httpClient.delete<void>(`${this.url}/${id}`);
   }
 
-  updateMovie(movie: Movie): Observable<Movie> {
-    return this.httpClient.put<Movie>(`${this.url}/${movie.id}`, movie);
-}
+  getMovieById(id: string): Observable<Movie> {
+    return this.httpClient.get<Movie>(`${this.url}/${id}`);
+  }
 
+  updateMovie(movie: Movie): Observable<void> {
+    return this.httpClient.put<void>(`${this.url}/${movie.id}`, movie);
+  }
 }

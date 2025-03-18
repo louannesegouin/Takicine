@@ -1,6 +1,7 @@
 <h1 class="title">Modifier un film</h1>
 <button class="come-back-btn" routerLink="/movies">Revenir en arrière</button>
 
+<form (ngSubmit)="updateMovie()">
 <div class="form-container">
     <div class="form-group">
         <label for="title">Titre</label>
@@ -13,7 +14,7 @@
 
     <div class="form-group">
         <label for="releaseDate">Date de sortie</label>
-        <input type="date" id="releaseDate" name="releaseDate" [(ngModel)]="movie.releaseDate"/>
+        <input type="date" id="releaseDate" name="releaseDate" [ngModel]="movie.releaseDate | date:'yyyy-MM-dd'" (ngModelChange)="movie.releaseDate = $event"/>
     </div>
 
     <div class="form-group">
@@ -23,3 +24,4 @@
 
     <button class="btn add-movie-btn" (click)="updateMovie()">Modifier</button>
 </div>
+</form>

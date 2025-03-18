@@ -8,5 +8,5 @@ export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'movies', component: MoviesComponent},
     { path: 'add-movie', component: AddMovieComponent},
-    { path: 'update-movie', component: UpdateMovieComponent}
+    { path: 'update-movie/:id', component: UpdateMovieComponent}
 ];
