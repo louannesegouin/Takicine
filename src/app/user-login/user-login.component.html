@@ -1,0 +1,26 @@
+<div class="rating-container">
+  <h2>Noter un film</h2>
+  
+  <div class="movie-selector">
+    <h3>Sélectionnez un film :</h3>
+    <div class="movie-list">
+      <div *ngIf="movies.length === 0">Chargement des films...</div>
+      <div *ngFor="let movie of movies" 
+           (click)="selectMovie(movie)"
+           [class.selected]="selectedMovie?.id === movie.id"
+           class="movie-item">
+        {{ movie.title }}
+      </div>
+    </div>
+  </div>
+
+  <div class="stars" *ngIf="selectedMovie">
+    <span *ngFor="let star of [1,2,3,4,5]" 
+          (click)="rate(star)"
+          [class.filled]="star <= rating"
+          class="star">★</span>
+  </div>
+  
+  <p *ngIf="selectedMovie && rating">Note pour {{ selectedMovie.title }} : {{rating}}/5</p>
+  <button (click)="submitRating()" [disabled]="!rating || !selectedMovie">Soumettre</button>
+</div>

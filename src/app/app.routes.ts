@@ -8,6 +8,8 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { UpdateUserComponent } from './admin-users/update-user/update-user.component';
 import { AddUserComponent } from './admin-users/add-user/add-user.component';
+import { LoginComponent } from './login/login.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -18,5 +20,7 @@ export const routes: Routes = [
     { path: 'admin', component: AdminComponent},
     { path: 'admin-users', component: AdminUsersComponent},
     { path: 'update-user/:id', component: UpdateUserComponent},
-    { path: 'add-user', component: AddUserComponent}
+    { path: 'add-user', component: AddUserComponent},
+    { path: 'login', component: LoginComponent},
+    { path: 'user-login', component: UserLoginComponent}
 ];

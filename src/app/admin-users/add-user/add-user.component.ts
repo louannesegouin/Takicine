@@ -3,12 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../../models/users';
 import { UsersService } from '../../services/users.service';
 import { Router } from '@angular/router';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss'
 })
@@ -28,7 +27,7 @@ user: User = {
   
   addUser(): void {
     this.usersService.addUser(this.user).subscribe(
-        () => this.router.navigate(['/monespace'])
+        () => this.router.navigate(['/login'])
     );
   }
 }

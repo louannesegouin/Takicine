@@ -1,15 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { User } from '../models/users';
-import { AsyncPipe } from '@angular/common';
-import { UserComponent } from './user/user.component';
+
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-admin-users',
   standalone: true,
-  imports: [AsyncPipe, UserComponent, CommonModule, RouterLink],  
+  imports: [CommonModule, RouterLink],  
   templateUrl: './admin-users.component.html',
   styleUrls: ['./admin-users.component.scss']
 })
