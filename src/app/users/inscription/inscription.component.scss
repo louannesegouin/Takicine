@@ -1,0 +1,90 @@
+.title {
+    text-align: center;
+    margin: 2% 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5D5C61;
+    text-transform: uppercase;
+}
+
+
+.come-back-btn {
+    border-radius: 5px;
+    border: 5px;
+    margin-left: 10%; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.come-back-btn:hover {
+    background-color: #4A70C5;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style des champs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: #5D5C61;
+    font-size: 16px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #5C85D6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 133, 214, 0.5);
+}
+
+/* Ajustement pour la date */
+input[type="date"] {
+    cursor: pointer;
+}
+
+/* Champs texte (textarea) */
+textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* Bouton Ajouter */
+.add-movie-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #77DD77;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.add-movie-btn:hover {
+    background-color: #5CB85C;
+}

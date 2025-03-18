@@ -56,4 +56,5 @@ export class MoviesService {
       map(() => `${this.url}/${id}/image`)
     );
   }
+
 }
