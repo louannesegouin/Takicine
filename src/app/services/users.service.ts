@@ -16,6 +16,10 @@ export class UsersService {
     return this.httpClient.get<User[]>(this.url).pipe(map((users)=>users.sort((a, b) => a.id! - b.id!)));
   }
 
+  addUser(user: User): Observable<void> {
+    return this.httpClient.post<void>(this.url, user);
+  }
+
   deleteUser(id: number): Observable<void> {
     return this.httpClient.delete<void>(`${this.url}/${id}`);
   }

@@ -7,6 +7,7 @@ import { AddPhotoComponent } from './movies/add-photo/add-photo.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { UpdateUserComponent } from './admin-users/update-user/update-user.component';
+import { AddUserComponent } from './admin-users/add-user/add-user.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'add-photo/:id', component: AddPhotoComponent},
     { path: 'admin', component: AdminComponent},
     { path: 'admin-users', component: AdminUsersComponent},
-    { path: 'update-user/:id', component: UpdateUserComponent}
+    { path: 'update-user/:id', component: UpdateUserComponent},
+    { path: 'add-user', component: AddUserComponent}
 ];
