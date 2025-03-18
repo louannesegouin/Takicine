@@ -5,7 +5,8 @@ import { AddMovieComponent } from './movies/add-movie/add-movie.component';
 import { UpdateMovieComponent } from './movies/update-movie/update-movie.component';
 import { AddPhotoComponent } from './movies/add-photo/add-photo.component';
 import { AdminComponent } from './admin/admin.component';
-import { InscriptionComponent } from './users/inscription/inscription.component';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { UpdateUserComponent } from './admin-users/update-user/update-user.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'update-movie/:id', component: UpdateMovieComponent},
     { path: 'add-photo/:id', component: AddPhotoComponent},
     { path: 'admin', component: AdminComponent},
-    { path: 'inscription', component: InscriptionComponent}
+    { path: 'admin-users', component: AdminUsersComponent},
+    { path: 'update-user/:id', component: UpdateUserComponent}
 ];

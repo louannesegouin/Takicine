@@ -91,3 +91,15 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+.come-back-btn {
+    border-radius: 5px;
+    border: 5px;
+    margin-left: 10%; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.come-back-btn:hover {
+    background-color: #4A70C5;
+}

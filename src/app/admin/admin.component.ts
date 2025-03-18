@@ -1,5 +1,7 @@
 import { Component, inject, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { MoviesService } from '../services/movies.service';
+import { UsersService } from '../services/users.service';
+import { User } from '../models/users';
 import { Movie } from '../models/movies';
 import { RouterLink } from '@angular/router';
 import { Chart } from 'chart.js/auto';
@@ -15,10 +17,12 @@ export class AdminComponent implements OnInit, AfterViewInit {
   @ViewChild('movieRatingsChart') chartCanvas!: ElementRef<HTMLCanvasElement>;
   
   private readonly moviesService = inject(MoviesService);
+  private readonly usersService = inject(UsersService);
   private chart: Chart | null = null;
   
   movies: Movie[] = [];
   movieCount: number = 0;
+  users: User[] = [];
   userCount: number = 0;
   private dataLoaded = false;
 
@@ -30,6 +34,10 @@ export class AdminComponent implements OnInit, AfterViewInit {
       if (this.chartCanvas) {
         this.createRatingsChart();
       }
+    });
+    this.usersService.getUsers().subscribe(users => {
+      this.users = users;
+      this.userCount = users.length;
     });
   }
 

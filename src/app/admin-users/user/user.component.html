@@ -1,0 +1,13 @@
+<div class="card shadow m-4" style="width: 18rem; min-height: 55rem">
+    @if(user.image) {
+      <img src="http://localhost:8080/movies/{{user.id}}/image" class="card-img-top" alt="">
+    }
+    <div class="card-body">
+        <p class="card-text">{{user.firstName}}</p>
+        <p class="card-text">{{user.lastName}}</p>
+        <p class="card-text">{{user.email}}</p>
+        <p class="card-text">{{user.age}}</p>
+        <p class="card-text">{{user.points}}</p>
+    </div>
+  </div>
+  

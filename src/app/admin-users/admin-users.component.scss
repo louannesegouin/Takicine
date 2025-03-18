@@ -1,0 +1,119 @@
+/* Style du titre */
+.title {
+    text-align: center;
+    margin: 2% 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5D5C61;
+    text-transform: uppercase;
+}
+
+/* Table styling */
+.custom-table {
+    margin-top: 2%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* En-tête du tableau */
+.custom-table thead {
+    background-color: #A6D1E6; /* Bleu pastel */
+    color: #444;
+    font-size: 16px;
+}
+
+/* Style des cellules */
+.custom-table th, 
+.custom-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Alternance de couleur pour les lignes */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Gris clair */
+}
+
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Blanc */
+}
+
+/* Effet hover */
+.custom-table tbody tr:hover {
+    background-color: #e0e0e0; /* Gris légèrement plus foncé au survol */
+    transition: 0.3s;
+}
+
+/* Badge de note */
+.rating {
+    background-color: #77DD77; /* Vert pastel */
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* Synopsis Styling */
+.synopsis {
+    white-space: normal;
+    word-break: break-word;
+    max-width: 300px;
+    text-align: justify;
+    color: #444;
+}
+
+button{
+    border-radius: 5px;
+    border: 5px;
+    margin-left: 5%; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-movie-btn:hover {
+    background-color: #4A70C5;
+}
+
+.action-buttons{
+    max-width: 125px;
+}
+
+.add-photo-btn, .update-movie-btn, .delete-movie-btn {
+    padding: 10px 20px;
+    max-width: 100px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.update-movie-btn:hover {
+    background-color: #4A70C5;
+}
+
+.add-photo-btn:hover {
+    background-color: #45c961;
+}
+
+.delete-movie-btn:hover {
+    background-color: #FF6347;
+}
+
+.come-back-btn {
+    border-radius: 5px;
+    border: 5px;
+    margin-left: 10%; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.come-back-btn:hover {
+    background-color: #4A70C5;
+}
