@@ -70,8 +70,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         datasets: [{
           label: 'Notes moyennes des films',
           data: ratings,
-          backgroundColor: '#3498DB',
-          borderColor: '#2980B9',
+          backgroundColor: '#77DD77',
           borderWidth: 1
         }]
       },
